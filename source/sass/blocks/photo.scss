@@ -1,0 +1,30 @@
+.photo__description {
+  line-height: 24px;
+}
+
+.photo__title,
+.photo__likes {
+  font-weight: 700;
+  color: $basic-title;
+}
+
+.photo__author {
+  text-transform: none;
+
+  &::before{
+    display: inline-block;
+    content: "Автор фото: ";
+    padding-right: 4px;
+  }
+}
+.photo__likes::before {
+  display: inline-block;
+  content: "";
+  width: 23px;
+  height: 21px;
+  background-image: url(../img/icons/icon-like.svg);
+  background-position:center;
+  background-repeat:no-repeat;
+  margin-right: 14px;
+}
+

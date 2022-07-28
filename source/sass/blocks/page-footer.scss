@@ -1,0 +1,30 @@
+.page-footer__hashtag {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  vertical-align: middle;
+
+  a{
+    display: block;
+    color: $basic-title;
+  }
+}
+
+.page-footer__icon {
+  fill: $basic-title;
+  width: 27px;
+  height: 34px;
+
+  &:hover {
+    fill: $basic-color;
+  }
+  &:active {
+    fill: $basic-title;
+    opacity: 0.3;
+  }
+}

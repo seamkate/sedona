@@ -1,0 +1,72 @@
+.advantage__description {
+  text-align: center;
+}
+
+.advantage {
+  &--pic {
+    background-color: $basic-color;
+
+    .advantage__description,
+    .advantage__title {
+      color: $basic-white;
+    }
+  }
+  &--border-bottom:not(:last-child):after{
+    display: block;
+    content: " ";
+    width: 280px;
+    height: 1px;
+    background-color: $border;
+    margin: 0 auto;
+  }
+}
+
+.advantage__order-number {
+  &::before {
+    display: inline-block;
+    content: "- №";
+  }
+  &::after {
+    display: inline-block;
+    content: " -";
+  }
+}
+.advantage__image {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.advantages-of-city__item {
+  position: relative;
+  padding-left: 70px;
+  padding-right: 20px;
+
+  &::before {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-position: top, left;
+  }
+
+}
+
+.advantage--motels::before {
+  background-image: url(../img/icons/icon-house.svg)
+}
+
+.advantage--souvenirs::before {
+  background-image: url(../img/icons/icon-gift.svg)
+}
+
+.advantage--food::before {
+  background-image: url(../img/icons/icon-burger.svg)
+}
+
+.advantages__wrapper{
+  background-color: $backgroung-advantages;
+}

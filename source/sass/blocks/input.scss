@@ -1,0 +1,67 @@
+.input{
+  box-sizing: border-box;
+  height: 58px;
+  background-color: $basic-background;
+  text-transform: none;
+  border: none;
+  padding-top: 18px;
+  padding-left: 22px;
+  padding-bottom: 14px;
+  padding-right: 10px;
+  outline: none;
+
+  &--text {
+    width: 100%;
+    height: 160px;
+  }
+
+  &:hover {
+    background-color: $checkbox-hover;
+  }
+
+  &:focus,
+  &:active {
+    border: 4px solid #E5E5E5;
+    background-color: $basic-white;
+  }
+
+  &::-webkit-input-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: $basic-title;
+  }
+
+  &::-moz-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: $basic-title;
+  }
+
+  &:-ms-input-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: $basic-title;
+  }
+
+  &::-ms-input-placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: $basic-title;
+  }
+
+  &::placeholder {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 26px;
+    text-transform: none;
+    color: $basic-title;
+  }
+}
