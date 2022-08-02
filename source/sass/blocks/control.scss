@@ -82,3 +82,22 @@
   }
 }
 
+// Ширина экрана от 768px
+
+@media (min-width: $tablet-width) {
+  .video__volume {
+    width: 100%;
+  }
+
+  .control--reset {
+    order: -1;
+  }
+
+  .control {
+    path {
+      fill: $basic-white;
+      stroke: $basic-white;
+    }
+  }
+}
+

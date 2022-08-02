@@ -11,9 +11,9 @@
   cursor: pointer;
   padding-left: 80px;
   -webkit-user-select: none;
-     -moz-user-select: none;
+    -moz-user-select: none;
       -ms-user-select: none;
-          user-select: none;
+        user-select: none;
 
   text-transform: none;
 }
@@ -55,5 +55,3 @@
 .radio__input:active + .radio__label::after {
   opacity: 0.3;
 }
-
-

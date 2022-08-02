@@ -44,8 +44,8 @@
 
     </nav>
 
-    <a class="page-header__link">
-      <img class="page-header__logo" src="../img/logo.svg" alt="Логотип города Седона" height="102" width="84">
+    <a class="page-header__link" href="index.html">
+      <img class="page-header__logo" src="../img/logo.svg" alt="Логотип города Седона" height="84" width="102">
     </a>
 
     <div class="page-header__image page-header__image--inner-page">
@@ -54,7 +54,7 @@
 
   </header>
 
-  <main>
+  <main class="page-body">
     <h1 class="visually-hidden">
       Поделись впечатлением о городе Седона
     </h1>
@@ -75,7 +75,7 @@
 
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
 
-        <fieldset class="feedback-form__fieldset fieldset">
+        <fieldset class="feedback-form__fieldset fieldset fieldset--name">
           <legend class="feedback-form__legend title">Представьтесь</legend>
 
           <div class="feedback-form__item">
@@ -89,13 +89,13 @@
           </div>
 
           <div class="feedback-form__item">
-             <label class="feedback-form__label" for="patronymic">Отчество</label>
+            <label class="feedback-form__label" for="patronymic">Отчество</label>
             <input class="input" id="patronymic" type="text" placeholder="Александрович">
           </div>
 
         </fieldset>
 
-        <fieldset class="feedback-form__fieldset fieldset">
+        <fieldset class="feedback-form__fieldset fieldset fieldset--contacts">
           <legend class="feedback-form__legend title">Контактная информация</legend>
 
           <div class="feedback-form__item">
@@ -114,7 +114,7 @@
 
         </fieldset>
 
-        <fieldset class="feedback-form__fieldset fieldset">
+        <fieldset class="feedback-form__fieldset fieldset fieldset--impression">
           <legend class="feedback-form__legend title">Ваше общее впечатление</legend>
 
           <ul class="feedback-form__list clear-list">
@@ -147,10 +147,10 @@
 
         </fieldset>
 
-        <fieldset class="feedback-form__fieldset fieldset">
+        <fieldset class="feedback-form__fieldset fieldset fieldset--attraction">
           <legend class="feedback-form__legend title">Посещенные достопримечательности</legend>
 
-          <ul class=" feedback-form__list clear-list">
+          <ul class=" feedback-form__list feedback-form__list--atrraction clear-list">
             <li class="checkbox">
               <input class="checkbox__input visually-hidden" type="checkbox" name="attraction" id="devils-bridge" value="Мост Дьявола" checked>
 
@@ -186,7 +186,7 @@
           </ul>
         </fieldset>
 
-        <div class="feedback-form__item">
+        <div class="feedback-form__item feedback-form__item--emotions">
           <p class="feedback-form__legend title">Опишите свои эмоции</p>
           <label class="visually-hidden" for="delight">Опишите свои эмоции</label>
           <textarea class="input input--text" id="delight" cols="30" rows="10" placeholder="Опишите подробно все свои восторги"></textarea>
@@ -196,7 +196,7 @@
           Отправить отзыв
         </button>
 
-        <p class="feedback-form__comment visually-hidden">
+        <p class="feedback-form__comment">
           * — обязательные поля
         </p>
 

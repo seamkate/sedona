@@ -5,23 +5,21 @@
 .advantage {
   &--pic {
     background-color: $basic-color;
+    // padding-top: 40px;
+    // padding-left: 32px;
+    // padding-right: 32px;
+    // padding-bottom: 44px;
 
     .advantage__description,
     .advantage__title {
       color: $basic-white;
     }
   }
-  &--border-bottom:not(:last-child):after{
-    display: block;
-    content: " ";
-    width: 280px;
-    height: 1px;
-    background-color: $border;
-    margin: 0 auto;
-  }
 }
 
 .advantage__order-number {
+  padding: 0;
+  margin: 0;
   &::before {
     display: inline-block;
     content: "- №";
@@ -31,21 +29,24 @@
     content: " -";
   }
 }
+
+.advantage__text {
+  padding: 0;
+  margin: 0;
+}
+
 .advantage__image {
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+    object-fit: cover;
 }
 
-.advantages-of-city__item {
-  position: relative;
-  padding-left: 70px;
-  padding-right: 20px;
+.advantages__item-with-icon {
+  // padding-left: 70px;
+  // padding-right: 20px;
 
   &::before {
-    position: absolute;
-    left: 20px;
-    top: 0;
+    display: block;
     content: "";
     width: 40px;
     height: 40px;
@@ -53,20 +54,94 @@
     background-position: top, left;
   }
 
-}
+  &--motels::before {
+    background-image: url(../img/icons/icon-house.svg);
+  }
 
-.advantage--motels::before {
-  background-image: url(../img/icons/icon-house.svg)
-}
+  &--souvenirs::before {
+    background-image: url(../img/icons/icon-gift.svg);
+  }
 
-.advantage--souvenirs::before {
-  background-image: url(../img/icons/icon-gift.svg)
-}
-
-.advantage--food::before {
-  background-image: url(../img/icons/icon-burger.svg)
+  &--food::before {
+    background-image: url(../img/icons/icon-burger.svg);
+  }
 }
 
 .advantages__wrapper{
-  background-color: $backgroung-advantages;
+
+  &--background {
+    background-color: $backgroung-advantages;
+  }
+}
+
+// Доп. стили для мобильного
+
+@media (max-width: $mobile-width-only) {
+  .advantage--pic:first-child {
+    padding-top: 50px;
+  }
+
+
+  .advantages__item-with-icon {
+    position: relative;
+    padding-left: 70px;
+    padding-right: 20px;
+
+    &::before {
+      position: absolute;
+      left: 20px;
+      top: 0;
+    }
+  }
+
+  .advantage--border-bottom{
+    min-width: 162px;
+    &:not(:last-child):after{
+      display: block;
+      content: " ";
+      width: 280px;
+      height: 1px;
+      background-color: $border;
+      margin: 0 auto;
+    }
+  }
+
+}
+
+// Ширина экрана от 768px
+
+@media (min-width: $tablet-width) {
+  .advantages__wrapper {
+    display: flex;
+  }
+
+  .advantage {
+    text-align: center;
+    padding: 0;
+
+    &--pic{
+      display: flex;
+      // height: 256px;
+      align-items: center;
+      // display: grid;
+      // grid-template-columns: 1fr, 2fr;
+    }
+  }
+
+  .advantage__description {
+    min-width: 256px;
+    flex-flow: 1;
+    // grid-column-start: 1;
+  }
+  .advantage__image {
+    // grid-column-start: 2;
+    flex-flow: 2;
+    height: 256px;
+  }
+
+  .advantages__item-with-icon {
+    &::before {
+      margin: 0 auto;
+    }
+  }
 }

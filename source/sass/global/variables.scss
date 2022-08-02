@@ -8,6 +8,7 @@ $basic-color-active: #5496bd;
 
 $basic-title: #000000;
 $basic-title-opacity-2: rgba(1, 1, 1, 0.2);
+$basic-title-opacity-3: rgba(1, 1, 1, 0.3);
 $basic-title-opacity-6: rgba(1, 1, 1, 0.6);
 $basic-text: #333333;
 
@@ -29,3 +30,8 @@ $control: #5C6870;
 $main-menu-active: #766357;
 $main-menu-active-hover: #604e43;
 
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width-only: 767px;
