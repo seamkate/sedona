@@ -10,10 +10,7 @@
   transform: translateY(50%);
   cursor: pointer;
   padding-left: 80px;
-  -webkit-user-select: none;
-    -moz-user-select: none;
-      -ms-user-select: none;
-        user-select: none;
+  user-select: none;
 
   text-transform: none;
 }
@@ -33,19 +30,19 @@
   left: 0;
 }
 
-.checkbox__input:checked + .checkbox__label::after{
+.checkbox__input:checked + .checkbox__label::after {
   position: absolute;
   width: 56px;
   height: 56px;
-  background-image: url(../img/icons/icon-tick.svg);
-  background-repeat:no-repeat;
+  background-image: url("../img/icons/icon-tick.svg");
+  background-repeat: no-repeat;
   background-position: center;
   top: -16px;
   left: 0;
 }
 
 .checkbox__input:hover + .checkbox__label::before,
-.checkbox__input:focus + .checkbox__label::before  {
+.checkbox__input:focus + .checkbox__label::before {
   background-color: $checkbox-hover;
 }
 

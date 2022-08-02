@@ -1,4 +1,4 @@
-.page-body{
+.page-body {
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -12,6 +12,7 @@
     padding-left: 30px;
     padding-right: 32px;
   }
+
   p {
     padding-left: 20px;
     padding-right: 20px;
@@ -20,8 +21,7 @@
 
 .page-body__video {
   margin: 0 auto;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 // Ширина экрана от 768px
 
@@ -30,6 +30,7 @@
     width: 648px;
   }
 }
+
 // Ширина экрана от 1200px
 
 @media (min-width: $desktop-width) {

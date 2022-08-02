@@ -5,10 +5,6 @@
 .advantage {
   &--pic {
     background-color: $basic-color;
-    // padding-top: 40px;
-    // padding-left: 32px;
-    // padding-right: 32px;
-    // padding-bottom: 44px;
 
     .advantage__description,
     .advantage__title {
@@ -20,10 +16,12 @@
 .advantage__order-number {
   padding: 0;
   margin: 0;
+
   &::before {
     display: inline-block;
     content: "- №";
   }
+
   &::after {
     display: inline-block;
     content: " -";
@@ -37,8 +35,7 @@
 
 .advantage__image {
   width: 100%;
-  -o-object-fit: cover;
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .advantages__item-with-icon {
@@ -55,20 +52,19 @@
   }
 
   &--motels::before {
-    background-image: url(../img/icons/icon-house.svg);
+    background-image: url("../img/icons/icon-house.svg");
   }
 
   &--souvenirs::before {
-    background-image: url(../img/icons/icon-gift.svg);
+    background-image: url("../img/icons/icon-gift.svg");
   }
 
   &--food::before {
-    background-image: url(../img/icons/icon-burger.svg);
+    background-image: url("../img/icons/icon-burger.svg");
   }
 }
 
-.advantages__wrapper{
-
+.advantages__wrapper {
   &--background {
     background-color: $backgroung-advantages;
   }
@@ -80,7 +76,6 @@
   .advantage--pic:first-child {
     padding-top: 50px;
   }
-
 
   .advantages__item-with-icon {
     position: relative;
@@ -94,9 +89,10 @@
     }
   }
 
-  .advantage--border-bottom{
+  .advantage--border-bottom {
     min-width: 162px;
-    &:not(:last-child):after{
+
+    &:not(:last-child)::after {
       display: block;
       content: " ";
       width: 280px;
@@ -105,7 +101,6 @@
       margin: 0 auto;
     }
   }
-
 }
 
 // Ширина экрана от 768px
@@ -119,22 +114,18 @@
     text-align: center;
     padding: 0;
 
-    &--pic{
+    &--pic {
       display: flex;
-      // height: 256px;
       align-items: center;
-      // display: grid;
-      // grid-template-columns: 1fr, 2fr;
     }
   }
 
   .advantage__description {
     min-width: 256px;
     flex-flow: 1;
-    // grid-column-start: 1;
   }
+
   .advantage__image {
-    // grid-column-start: 2;
     flex-flow: 2;
     height: 256px;
   }

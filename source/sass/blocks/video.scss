@@ -1,19 +1,14 @@
 .video__block {
-width: 100%;
-height: 100%;
+  width: 100%;
+  height: 100%;
 }
-.video__volume {
 
-  // margin-top: -60px;
+.video__volume {
   display: block;
   background-color: $basic-title;
   opacity: 0.6;
   height: 45px;
   width: 100%;
-height: 100%;
-  // padding-top: 16px;
-
-  // margin-bottom: 40px;
 }
 
 .video__buttons {
@@ -30,6 +25,7 @@ height: 100%;
     min-width: 280px;
   }
 }
+
 .video__control {
   margin-right: 30px;
   padding-left: 43px;

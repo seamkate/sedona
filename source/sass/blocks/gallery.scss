@@ -1,14 +1,11 @@
 // Ширина экрана от 768px
 
 @media (min-width: $tablet-width) {
-
-  .gallery{
+  .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: -webkit-max-content;
-    grid-template-rows: minmax(-webkit-min-content,-webkit-max-content);
-    grid-template-rows: minmax(min-content,max-content);
   }
+
   .gallery__item:first-child {
     grid-column-start: 1;
     grid-column-end: -1;
@@ -19,6 +16,6 @@
 
 @media (min-width: $desktop-width) {
   .gallery {
-    grid-template-columns:repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

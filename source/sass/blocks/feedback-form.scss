@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   text-align: center;
+
   &::after {
     display: inline-block;
     content: ":";
@@ -14,7 +15,7 @@
 }
 
 .feedback-form__label {
-  &::after{
+  &::after {
     display: inline-block;
     content: ":";
   }
@@ -24,11 +25,11 @@
   min-width: 280px;
 }
 
-.feedback-form__comment{
+.feedback-form__comment {
   display: none;
 }
 
-.feedback-form__item > .input:required > .feedback-form__label::after{
+.feedback-form__item > .input:required > .feedback-form__label::after {
   display: inline-block;
   content: "*:";
 }
@@ -45,12 +46,13 @@
   background-position: center;
   position: absolute;
 }
+
 .feedback-form__input-tel::after {
-  background-image: url(../img/icons/icon-phone.svg);
+  background-image: url("../img/icons/icon-phone.svg");
 }
 
 .feedback-form__input-mail::after {
-  background-image: url(../img/icons/icon-mail.svg);
+  background-image: url("../img/icons/icon-mail.svg");
 }
 
 // Ширина экрана от 768px
@@ -60,6 +62,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .fieldset {
     &--impression {
       order: -4;
@@ -77,8 +80,7 @@
   }
 
   .feedback-form__list--atrraction {
-    -moz-columns: 2;
-         columns: 2;
+    columns: 2;
   }
 
   .feedback-form__item--emotions {
