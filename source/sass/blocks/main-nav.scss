@@ -5,12 +5,17 @@
   font-size: 18px;
   line-height: 40px;
   text-align: center;
+  border: none;
 
   padding-top: 10px;
   padding-bottom: 5px;
-  padding-left: 34px;
-  padding-right: 34px;
-  border: none;
+
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 16px;
+  }
 }
 
 //Кнопки управления мобильным меню
@@ -153,14 +158,24 @@
 // Ширина экрана от 768px
 
 @media (min-width: $tablet-width) {
+  .main-nav__list{
+    display: flex;
+    justify-content: stretch;
+  }
+
   .main-nav__button {
     display: none;
   }
 
   .main-nav__item {
-    display: inline-block;
-    min-width: 153px;
+    display: block;
+    width: 20%;
     background-color: $basic-white;
+    min-height: 56px;
+
+    &:nth-child(4n-2) {
+      margin-right: 20%;
+    }
   }
 
   .main-nav__link {

@@ -19,6 +19,13 @@
   height: 84px;
   padding: 0;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 }
 
 .page-header__image {
@@ -34,6 +41,14 @@
   padding-right: 19px;
   height: 389px;
 
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
+    padding-top: 77px;
+    padding-left: 153px;
+    padding-right: 153px;
+    min-height: 518px;
+  }
+
   &--inner-page {
     padding-top: 52px;
     padding-bottom: 67px;
@@ -41,30 +56,13 @@
   }
 
   img {
-    min-width: 282px;
+    width: 282px;
     height: 100%;
     padding: 0;
     margin: 0;
-  }
-}
-
-// Ширина экрана от 768px
-
-@media (min-width: $tablet-width) {
-  .page-header__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .page-header__image {
-    margin-top: 0;
-    padding-left: 153px;
-    padding-right: 153px;
-
-    img {
-      width: 461px;
+    @media (min-width: $tablet-width) {
+      min-width: 461px;
+      height: 100%;
     }
   }
 }

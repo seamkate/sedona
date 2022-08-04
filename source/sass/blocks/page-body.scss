@@ -1,40 +1,62 @@
 .page-body {
+  min-width: 320px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .page-body__description {
-  max-width: 520px;
-  margin: 0 auto;
 
-  h2 {
+  .description__title {
     padding-top: 32px;
     padding-left: 30px;
     padding-right: 32px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 44px;
+      padding-left: 124px;
+      padding-right: 124px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 52px;
+      padding-left: 358px;
+      padding-right: 358px;
+    }
   }
 
-  p {
+  .description__text {
     padding-left: 20px;
     padding-right: 20px;
+
+    @media (min-width: $tablet-width) {
+      padding-bottom: 52px;
+    }
+    @media (min-width: $desktop-width) {
+      padding-bottom: 41px;
+    }
   }
+}
+
+.page-body__find-hotel {
+  padding: 33px 20px 49px;
+  max-width: 458px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding: 57px 0;
+  }
+
 }
 
 .page-body__video {
   margin: 0 auto;
   object-fit: cover;
-}
-// Ширина экрана от 768px
 
-@media (min-width: $tablet-width) {
-  .page-body__video {
+  @media (min-width: $tablet-width) {
     width: 648px;
   }
-}
 
-// Ширина экрана от 1200px
-
-@media (min-width: $desktop-width) {
-  .page-body__video {
-    width: 800px;
+  @media (min-width: $desktop-width) {
+      width: 800px;
   }
 }
