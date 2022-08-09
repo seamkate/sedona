@@ -1,6 +1,10 @@
 .map {
   height: 350px;
 
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 10px;
+  }
+
   img {
     width: 100%;
     object-fit: cover;

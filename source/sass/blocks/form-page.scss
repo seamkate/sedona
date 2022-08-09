@@ -1,0 +1,46 @@
+.form-page__description {
+  margin-top: 36px;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 435px;
+    margin: 63px auto 70px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 114px auto 43px;
+  }
+
+  .description__title,
+  .description__text {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .description__title {
+    padding-bottom: 28px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 26px;
+
+      padding-bottom: 31px;
+    }
+  }
+
+  .description__text {
+    line-height: 24px;
+    padding-bottom: 16px;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .form-page__description::after,
+  .form-page .fieldset::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $checkbox-hover;
+  }
+}

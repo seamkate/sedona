@@ -1,21 +1,39 @@
-// Ширина экрана от 768px
+.gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 
-@media (min-width: $tablet-width) {
-  .gallery {
+  @media (min-width: $tablet-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 58px;
+
+    .gallery__item:first-child {
+      grid-column-start: 1;
+      grid-column-end: -1;
+    }
   }
 
-  .gallery__item:first-child {
-    grid-column-start: 1;
-    grid-column-end: -1;
+  @media (min-width: $desktop-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0;
   }
 }
 
-// Ширина экрана от 1200px
+.gallery__item {
+  margin: 0 auto;
 
-@media (min-width: $desktop-width) {
-  .gallery {
-    grid-template-columns: repeat(3, 1fr);
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      display: block;
+      content: "";
+      width: 320px;
+      height: 1px;
+      background-color: $checkbox-hover;
+      margin-bottom: 23px;
+    }
   }
 }

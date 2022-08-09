@@ -1,37 +1,285 @@
-.feedback-form__item {
-  width: 100%;
-  margin-bottom: 20px;
-}
+.feedback-form {
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-bottom: 10px;
+  }
 
-.feedback-form__legend {
-  margin: 0;
-  padding: 0;
-  text-align: center;
-
-  &::after {
-    display: inline-block;
-    content: ":";
+  @media (min-width: $desktop-width) {
+    padding-left: 120px;
+    padding-right: 120px;
+    margin-bottom: 10px;
   }
 }
 
+.feedback-form__fieldset {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    &--contacts > legend::before,
+    &--attraction > legend::before,
+    &--contacts > legend::after,
+    &--attraction > legend::after {
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 123px;
+      height: 1px;
+      background-color: $border;
+    }
+
+    &--contacts > legend::before,
+    &--attraction > legend::before {
+      left: 0;
+    }
+
+    &--contacts > legend::after,
+    &--attraction > legend::after {
+      right: 0;
+    }
+  }
+
+  &--name {
+    .feedback-form__legend {
+      padding: 0 0 22px;
+    }
+
+    .feedback-form__item:last-child {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $tablet-width) {
+      padding-left: 58px;
+
+      .feedback-form__legend {
+        text-align: left;
+        padding-bottom: 59px;
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-left: 78px;
+
+      .feedback-form__legend {
+        text-align: left;
+        padding-bottom: 59px;
+      }
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-top: 22px;
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .feedback-form__legend {
+      padding-bottom: 17px;
+
+      @media (min-width: $tablet-width) {
+        padding: 0;
+        margin-bottom: 22px;
+      }
+
+      @media (min-width: $desktop-width) {
+        margin-bottom: 72px;
+      }
+    }
+
+    .feedback-form__label {
+      padding-left: 22px;
+      padding-bottom: 7px;
+
+      @media (min-width: $desktop-width) {
+        padding-left: 0;
+      }
+    }
+
+    .feedback-form__item {
+      flex-wrap: wrap;
+      width: 100%;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 25px;
+      }
+
+      @media (min-width: $desktop-width) {
+        // width: 100%;
+        flex-wrap: nowrap;
+        justify-content: start;
+      }
+    }
+
+    .feedback-form__item:first-child {
+      margin-bottom: 14px;
+    }
+  }
+
+  &--attraction {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      width: 100%;
+      margin-bottom: 35px;
+
+      .feedback-form__legend {
+        margin-bottom: 47px;
+      }
+    }
+  }
+
+  &--impression {
+    @media (min-width: $tablet-width) {
+      position: relative;
+      order: -4;
+
+      &::after {
+        position: absolute;
+        top: -82px;
+        right: 0;
+        content: "";
+        width: 1px;
+        min-height: 292px;
+        max-height: 100%;
+        background-color: $checkbox-hover;
+      }
+
+      .feedback-form__legend {
+        text-align: left;
+        padding: 0 0 60px;
+
+        @media (min-width: $desktop-width) {
+          padding-left: 80px;
+        }
+      }
+    }
+  }
+}
+
+.feedback-form__item {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
+
+  &--emotions {
+    flex-wrap: wrap;
+    margin-bottom: 51px;
+
+    .feedback-form__legend {
+      margin: 0 auto 15px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 55px;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      grid-column: 1/-1;
+      margin-bottom: 63px;
+    }
+  }
+}
+
+.feedback-form__legend {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
 .feedback-form__label {
+  padding-right: 15px;
+
   &::after {
-    display: inline-block;
+    display: inline;
     content: ":";
+  }
+
+  &--tel {
+    display: inline;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $desktop-width) {
+      display: none;
+    }
+  }
+}
+
+.feedback-form__list {
+  padding: 25px 20px 20px 20px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+
+    &--attraction {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: start;
+      padding-left: 95px;
+
+      li {
+        width: 225px;
+        margin-right: 34px;
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--attraction {
+      justify-content: space-between;
+      padding-left: 0;
+
+      li {
+        width: 225px;
+        margin-right: 0;
+      }
+    }
   }
 }
 
 .feedback-form__button {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 48px;
   min-width: 280px;
+
+  @media (min-width: $tablet-width) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .feedback-form__comment {
   display: none;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    text-align: right;
+  }
 }
 
-.feedback-form__item > .input:required > .feedback-form__label::after {
-  display: inline-block;
-  content: "*:";
+.feedback-form__input-tel,
+.feedback-form__input-mail {
+  width: 100%;
+
+  @media (min-width: $desktop-width) {
+    max-width: 315px;
+  }
 }
 
 .feedback-form__input-tel::after,
@@ -41,6 +289,7 @@
   width: 58px;
   height: 58px;
   margin: 0;
+  transform: translateX(-58px);
   background-color: $background-dark-input;
   background-repeat: no-repeat;
   background-position: center;
@@ -53,43 +302,4 @@
 
 .feedback-form__input-mail::after {
   background-image: url("../img/icons/icon-mail.svg");
-}
-
-// Ширина экрана от 768px
-
-@media (min-width: $tablet-width) {
-  .feedback-form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .fieldset {
-    &--impression {
-      order: -4;
-    }
-
-    &--contacts {
-      grid-column: 1 / -1;
-      width: 100%;
-    }
-
-    &--attraction {
-      grid-column: 1 / -1;
-      width: 100%;
-    }
-  }
-
-  .feedback-form__list--atrraction {
-    columns: 2;
-  }
-
-  .feedback-form__item--emotions {
-    grid-column: 1 / -1;
-    width: 100%;
-  }
-
-  .feedback-form__comment {
-    display: block;
-    text-align: end;
-  }
 }

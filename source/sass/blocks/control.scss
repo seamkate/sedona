@@ -3,6 +3,13 @@
   border: none;
   display: block;
 
+  @media (min-width: $tablet-width) {
+    path {
+      fill: $basic-white;
+      stroke: $basic-white;
+    }
+  }
+
   &--volume {
     width: 100%;
     height: 3px;
@@ -72,32 +79,29 @@
 
   &--reset {
     width: 16px;
+    margin-left: 20px;
+
+    @media (min-width: $tablet-width) {
+      order: -1;
+      margin-left: 0;
+    }
   }
 
   &--subtitle {
     width: 32px;
+    margin-right: 31px;
+
+    @media (min-width: $tablet-width) {
+      margin-right: 0;
+    }
   }
 
   &--fullscreen {
     width: 20px;
-  }
-}
+    margin-right: 29px;
 
-// Ширина экрана от 768px
-
-@media (min-width: $tablet-width) {
-  .video__volume {
-    width: 100%;
-  }
-
-  .control--reset {
-    order: -1;
-  }
-
-  .control {
-    path {
-      fill: $basic-white;
-      stroke: $basic-white;
+    @media (min-width: $tablet-width) {
+      margin-right: 0;
     }
   }
 }

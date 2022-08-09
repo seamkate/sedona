@@ -26,6 +26,18 @@
     left: 0;
     right: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    width: 187px;
+    height: 97px;
+    background-image: url("../img/blue-triangle.svg");
+    background-repeat: no-repeat;
+    background-position: top;
+
+    .page-header__logo {
+      margin-left: 42px;
+    }
+  }
 }
 
 .page-header__image {
@@ -36,23 +48,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 90px;
-  padding-bottom: 85px;
+  padding-bottom: 75px;
   padding-left: 19px;
   padding-right: 19px;
-  height: 389px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;
     padding-top: 77px;
     padding-left: 153px;
     padding-right: 153px;
-    min-height: 518px;
-  }
-
-  &--inner-page {
-    padding-top: 52px;
-    padding-bottom: 67px;
-    background-position: center bottom;
   }
 
   img {
@@ -60,9 +64,37 @@
     height: 100%;
     padding: 0;
     margin: 0;
+
+    @media (max-width: $mobile-width-only) {
+      max-width: 461px;
+    }
+
     @media (min-width: $tablet-width) {
       min-width: 461px;
       height: 100%;
+    }
+  }
+
+  &--inner-page {
+    padding-top: 52px;
+    padding-bottom: 57px;
+    background-position: center bottom;
+
+    @media (max-width: $mobile-width-only) {
+      padding-left: 45px;
+      padding-right: 45px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      padding: 95px 153px 107px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding: 101px 370px 110px;
     }
   }
 }

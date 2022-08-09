@@ -1,31 +1,87 @@
+.photo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.photo__description,
+.photo__image {
+  @media (max-width: $mobile-width-only) {
+    margin: 0 20px;
+  }
+}
+
 .photo__description {
   line-height: 24px;
+  order: 2;
+  padding-top: 11px;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet-width) {
+    background-color: $basic-background;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 19px 0 13px 20px;
+  }
+
+  @media (min-width: $desktop-width) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba($basic-title, 0.6);
+  }
 }
 
 .photo__title,
 .photo__likes {
   font-weight: 700;
   color: $basic-title;
+  margin: 0;
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
+  }
 }
 
 .photo__likes {
   width: 84px;
-  height: auto;
+  height: 100%;
 }
 
 .photo__image {
-  width: 100%;
+  width: 280px;
   height: 280px;
   object-fit: cover;
+
+  @media (min-width: $tablet-width) {
+    height: 267px;
+    width: 100%;
+
+    &--big {
+      height: 400px;
+    }
+  }
 }
 
 .photo__author {
   text-transform: none;
+  margin: 0;
+  padding-bottom: 9px;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+  }
 
   &::before {
     display: inline-block;
     content: "Автор фото: ";
     padding-right: 4px;
+  }
+
+  @media (min-width: $desktop-width) {
+    color: $basic-white;
   }
 }
 
@@ -38,50 +94,55 @@
   background-position: center;
   background-repeat: no-repeat;
   margin-right: 14px;
+
+  @media (min-width: $desktop-width) {
+    opacity: 1;
+    background-image: url('data:image/svg+xml,%3Csvg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath opacity="0.3" d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="white"/%3E%3C/svg%3E%0A');
+  }
 }
 
 // Ширина экрана от 768px
 
-@media (min-width: $tablet-width) {
-  .photo__description {
-    background-color: $basic-background;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
+// @media (min-width: $tablet-width) {
+//   .photo__description {
+//     background-color: $basic-background;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//   }
 
-  .photo__image {
-    height: 267px;
-    object-fit: cover;
+//   .photo__image {
+//     height: 267px;
+//     object-fit: cover;
 
-    &--big {
-      height: 400px;
-      width: 100%;
-    }
-  }
-}
+//     &--big {
+//       height: 400px;
+//       width: 100%;
+//     }
+//   }
+// }
 // Ширина экрана от 1200px
 
-@media (min-width: $desktop-width) {
-  .photo {
-    position: relative;
-  }
+// @media (min-width: $desktop-width) {
+//   .photo {
+//     position: relative;
+//   }
 
-  .photo__description {
-    background-color: $basic-title-opacity-3;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: $basic-white;
-  }
+//   .photo__description {
+//     background-color: $basic-title-opacity-3;
+//     position: absolute;
+//     bottom: 0;
+//     width: 100%;
+//     color: $basic-white;
+//   }
 
-  .photo__title,
-  .photo__author,
-  .photo__likes {
-    color: $basic-white;
-  }
+//   .photo__title,
+//   .photo__author,
+//   .photo__likes {
+//     color: $basic-white;
+//   }
 
-  .photo__likes::before {
-    background-image: url('data:image/svg+xml,%3Csvg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="white"/%3E%3C/svg%3E%0A');
-  }
-}
+//   .photo__likes::before {
+//     background-image: url('data:image/svg+xml,%3Csvg width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath d="M12.9636 3.78L12.3364 6.825L11.7091 9.45H14.3227H20.8045V11.55C20.8045 11.55 20.8045 11.55 20.8045 11.655L17.7727 18.9H8.36364V8.4L12.9636 3.78ZM2.09091 10.5V18.9V10.5ZM13.8 0L6.9 6.93C6.48182 7.245 6.27273 7.77 6.27273 8.4V18.9C6.27273 20.055 7.21364 21 8.36364 21H17.7727C18.6091 21 19.3409 20.475 19.6545 19.74L22.7909 12.285C22.8955 12.075 22.8955 11.76 22.8955 11.55V9.45H23C23 8.295 22.0591 7.35 20.9091 7.35H14.3227L15.3682 2.52V2.205C15.3682 1.785 15.1591 1.365 14.95 1.05L13.8 0ZM4.18182 8.4H0V21H4.18182V8.4Z" fill="white"/%3E%3C/svg%3E%0A');
+//   }
+// }

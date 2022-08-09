@@ -1,6 +1,70 @@
+.video {
+  max-width: 648px;
+
+  .description__title {
+    padding-bottom: 28px;
+  }
+}
+
 .video__block {
+  background-color: $basic-text;
+  background-image: url("./img/video.jpg");
+  background-size: cover;
   width: 100%;
   height: 100%;
+
+  @media (min-width: $tablet-width) {
+    height: 500px;
+  }
+}
+
+.video__controls {
+  background-image: linear-gradient(transparent 0 45px, $basic-background 45px);
+  transform: translateY(-55px);
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  margin: 0 20px;
+
+  @media (max-width: $mobile-width-only) {
+    padding-bottom: 23px;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0;
+    padding-left: 25px;
+    padding-right: 46px;
+    transform: translateY(-102px);
+    height: 93px;
+    background: rgba($basic-title, 0.3);
+  }
+}
+
+.video__title {
+  @media (max-width: $mobile-width-only) {
+    &::before {
+      display: block;
+      content: "";
+      width: 320px;
+      height: 1px;
+      background-color: $checkbox-hover;
+      margin-bottom: 33px;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 77px;
+
+    .description__title {
+      padding-bottom: 35px;
+    }
+  }
+
+  .description__text {
+    margin: 0 30px;
+  }
 }
 
 .video__volume {
@@ -9,36 +73,15 @@
   opacity: 0.6;
   height: 45px;
   width: 100%;
-}
+  padding-top: 16px;
+  grid-column: 1 / -1;
 
-.video__buttons {
-  display: flex;
-  justify-content: space-between;
-  background-color: $basic-background;
-  padding: 23px;
-
-  div {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: wrap;
-    min-width: 280px;
+  @media (max-width: $mobile-width-only) {
+    margin-bottom: 22px;
   }
-}
 
-.video__control {
-  margin-right: 30px;
-  padding-left: 43px;
-  padding-right: 43px;
-}
-
-@media (min-width: $desktop-width) {
-  .video__volume {
-    width: 100%;
+  @media (min-width: $tablet-width) {
+    width: 389px;
     background-color: transparent;
-  }
-
-  .video__buttons {
-    background-color: $basic-title-opacity-6;
   }
 }
