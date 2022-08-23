@@ -22,9 +22,9 @@
     }
   }
 
-  &:invalid {
-    border-bottom: 4px solid  $invalid-input;
-  }
+  // &:invalid {
+  //   border-bottom: 4px solid  $invalid-input;
+  // }
 
   &:hover {
     background-color: $checkbox-hover;

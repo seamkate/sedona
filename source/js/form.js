@@ -1,5 +1,5 @@
-let feedbackForm = document.querySelector('.feedback-form');
-
+'use strict';
+let form = document.querySelector('.feedback-form');
 let popUpSuccess = document.querySelector('.popup--success');
 let popUpFailure = document.querySelector('.popup--failure');
 let popUpButtonSuccess = document.querySelector('.popup--success > .popup__button');
@@ -15,7 +15,10 @@ popUpButtonFailure.addEventListener('click', function() {
 });
 
 
-feedbackForm.addEventListener('submit', function (event) {
-  event.preventDefault()
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
+
+    // popUpFailure.classList.add('popup--opened');
+
   popUpSuccess.classList.add('popup--opened');
 })

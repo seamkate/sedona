@@ -26,24 +26,19 @@
     left: 0;
     right: 0;
   }
+}
 
+.page-header__logo {
   @media (min-width: $desktop-width) {
     width: 187px;
-    height: 97px;
-    background-image: url("../img/blue-triangle.svg");
-    background-repeat: no-repeat;
-    background-position: top;
-
-    .page-header__logo {
-      margin-left: 42px;
-    }
+    height: 96px;
+    transform: translateX(-42px);
   }
 }
 
 .page-header__image {
   text-align: center;
   margin-top: -28px;
-  background-image: url("../img/back-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -52,11 +47,32 @@
   padding-left: 19px;
   padding-right: 19px;
 
+  @media (max-width: $mobile-width-only) {
+    background-image: url("../img/back/back-mobile.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back/back-mobile@2x.jpg");
+    }
+  }
+
   @media (min-width: $tablet-width) {
     margin-top: 0;
     padding-top: 77px;
     padding-left: 153px;
     padding-right: 153px;
+    background-image: url("../img/back/back-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back/back-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/back/back-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/back/back-desktop@2x.jpg");
+    }
   }
 
   img {
@@ -83,18 +99,33 @@
     @media (max-width: $mobile-width-only) {
       padding-left: 45px;
       padding-right: 45px;
+      background-image: url("../img/back/back-mobile-inner.jpg");
 
-      img {
-        width: 100%;
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back/back-mobile-inner@2x.jpg");
       }
+    }
+
+    img {
+      width: 100%;
     }
 
     @media (min-width: $tablet-width) {
       padding: 95px 153px 107px;
+      background-image: url("../img/back/back-tablet-inner.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back/back-tablet-inner@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
       padding: 101px 370px 110px;
+      background-image: url("../img/back/back-desktop-inner.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/back/back-desktop-inner@2x.jpg");
+      }
     }
   }
 }

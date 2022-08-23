@@ -1,0 +1,17 @@
+{
+  "name": "Sedona",
+  "short_name": "Sedona",
+  "icons": [{
+        "src": "img/favicon/192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      }, {
+        "src": "img/favicon/apple-touch-icon.png",
+        "sizes": "152x152",
+        "type": "image/png"
+      }],
+  "start_url": "/index.html?homescreen=1",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff"
+}

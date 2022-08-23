@@ -2,11 +2,36 @@
   outline: none;
   border: none;
   display: block;
+  cursor: pointer;
 
-  @media (min-width: $tablet-width) {
-    path {
-      fill: $basic-white;
-      stroke: $basic-white;
+  &--fullscreen,
+  &--reset,
+  &--subtitle {
+    color: $control;
+    background-color: transparent;
+
+    @media (max-width: $mobile-width-only) {
+      color: $control;
+
+      &:hover {
+        color: $basic-text;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+
+    @media (min-width: $tablet-width) {
+      color: $basic-white;
+
+      &:hover {
+        opacity: 0.6;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
   }
 
@@ -16,6 +41,7 @@
     appearance: none;
     outline: none;
     background-color: transparent;
+    z-index: 2;
 
     &::-webkit-slider-runnable-track,
     &::-webkit-slider-thumb {
@@ -38,42 +64,18 @@
     }
 
     &::-webkit-slider-runnable-track {
-      background-color: $basic-white-opacity-2;
+      background: rgba($basic-white, 0.2);
       height: 3px;
     }
 
     &::-moz-range-track {
-      background-color: $basic-white;
+      background: rgba($basic-white, 0.2);
       height: 3px;
-      opacity: 0.2;
       appearance: none;
     }
 
     &::-moz-range-thumb {
       cursor: pointer;
-    }
-  }
-
-  &--reset,
-  &--subtitle,
-  &--fullscreen {
-    height: 20px;
-    background-color: transparent;
-    background-position: center;
-    background-repeat: no-repeat;
-    cursor: pointer;
-
-    &:active {
-      opacity: 0.3;
-    }
-  }
-
-  &--reset:hover,
-  &--subtitle:hover,
-  &--fullscreen:hover {
-    path {
-      fill: $basic-text;
-      stroke: $basic-text;
     }
   }
 
