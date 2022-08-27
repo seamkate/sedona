@@ -122,12 +122,6 @@ a {
       left: 0;
       right: 0; } }
 
-.logotype-background {
-  display: none; }
-  @media (min-width: 1200px) {
-    .logotype-background {
-      display: block; } }
-
 @media (min-width: 1200px) {
   .page-header__logo {
     width: 187px;
@@ -190,9 +184,8 @@ a {
   @media (max-width: 767px) and (min-resolution: 2dppx) {
     .page-header__image--inner-page {
       background-image: url("../img/back/back-mobile-inner@2x.jpg"); } }
-    @media (max-width: 767px) {
-        .page-header__image--inner-page img {
-          width: 100%; } }
+    .page-header__image--inner-page img {
+      width: 100%; }
     @media (min-width: 768px) {
       .page-header__image--inner-page {
         padding: 95px 153px 107px;
