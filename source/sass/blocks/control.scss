@@ -3,11 +3,10 @@
   border: none;
   display: block;
   cursor: pointer;
+  background-color: transparent;
 
-  &--fullscreen,
-  &--reset,
-  &--subtitle {
-    color: $control;
+  svg {
+    fill: $control;
     background-color: transparent;
 
     @media (max-width: $mobile-width-only) {
@@ -23,7 +22,7 @@
     }
 
     @media (min-width: $tablet-width) {
-      color: $basic-white;
+      fill: $basic-white;
 
       &:hover {
         opacity: 0.6;

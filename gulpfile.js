@@ -47,7 +47,6 @@ const html = async () => {
 const scripts = async () => {
   return gulp.src("source/js/*.js")
     .pipe(terser())
-    .pipe(rename("*.min.js"))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 }
@@ -152,6 +151,8 @@ const watcher = () => {
   gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
+
+
 // Build
 
 const build = gulp.series(
@@ -164,10 +165,11 @@ const build = gulp.series(
     scripts,
     sprite,
     createWebp
-  ),
-);
+    ),
+    );
 
-exports.build = build;
+    exports.build = build;
+
 
 // Default
 
@@ -186,13 +188,5 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+));
 
-
-  // Deploy
-
-const deploy = (done) => {
-  return gulp.src("./build/**/*")
-    .pipe(ghPages());
-    done();
-}
